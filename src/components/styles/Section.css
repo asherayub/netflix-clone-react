@@ -1,0 +1,32 @@
+.section__wrapper {
+  width: 100vw;
+  margin: 0 auto;
+  padding: 150px 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  border-top: 3px solid gray;
+  border-bottom: 3px solid gray;
+}
+
+.section__left,
+.section__right {
+  width: 50vw;
+  margin: 0 25px;
+}
+.leftImg,
+.rightImg {
+  margin: 0 25px;
+  text-align: center;
+}
+@media (max-width: 425px) {
+  .section__wrapper {
+    flex-wrap: wrap;
+  }
+  .section__left,
+  .section__right {
+    text-align: center;
+  }
+}

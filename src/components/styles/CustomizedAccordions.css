@@ -1,0 +1,38 @@
+.accordion__wrapper {
+  width: 50%;
+  margin: 50px auto;
+}
+.accordion {
+  background-color: #3b3b3b;
+  color: #fff;
+}
+
+.MuiButtonBase-root {
+  background-color: #3b3b3b !important;
+}
+.MuiPaper-root {
+  border: none !important;
+}
+.MuiTypography-root {
+  color: white !important;
+}
+.MuiSvgIcon-root {
+  color: white !important;
+}
+.ready {
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;align-items: center;
+}
+.ready h5 {
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 425px) {
+  .accordion__wrapper {
+    width: 90vw;
+  }
+}
