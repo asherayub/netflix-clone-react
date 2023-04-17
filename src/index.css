@@ -27,7 +27,7 @@ header .logo {
 }
 
 .row {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   padding: 1em;
@@ -40,6 +40,7 @@ header .logo {
   width: 100%;
   min-height: 305px;
   overflow: scroll hidden;
+  justify-content: start;
 }
 .row__inner::-webkit-scrollbar {
   display: none;
