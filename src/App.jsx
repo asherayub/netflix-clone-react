@@ -3,6 +3,7 @@ import requests from "./requests";
 import Row from "./Row";
 import Header from "./Header";
 import Footer from "./Footer";
+import Hero from "./Hero";
 
 function App() {
   const [movies, setMovies] = useState({
@@ -31,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Hero trending={movies.trending} />
       <Row movie={movies.trending} rowTitle="Trending Now" />
       <Row movie={movies.netflixOriginals} rowTitle="Netflix Originals" />
       <Row movie={movies.topRated} rowTitle="Top Rated" />
