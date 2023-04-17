@@ -20,8 +20,10 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-header img {
-  height: 90px;
+header .logo {
+  font-size: 3rem;
+  padding: 0.5em;
+  color: #e50914;
 }
 
 .row {

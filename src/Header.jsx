@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <header>
-      <img className="logo" src="../Netflix_Logo_PMS.png" alt="Netflix Logo" />
+     <h1 className="logo">!NETFLIX</h1>
     </header>
   );
 };
