@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #00081d;
+  color: #ffffff;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.position__center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header img {
+  height: 90px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+.row h2 {
+  margin-bottom: 1em;
+  font-size: 2.3rem;
+}
+.row__inner {
+  width: 100%;
+  min-height: 305px;
+  overflow: scroll hidden;
+}
+.row__inner::-webkit-scrollbar {
+  display: none;
+}
+.movie__card {
+  position: relative;
+  box-shadow: 3px 3px 1rem 0 #00000080;
+  cursor: pointer;
+  margin-left: 1em;
+}
+.movie__card img {
+  height: 300px;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.745);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.overlay h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 0 0.5em 1em;
+}
+.overlay span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #e50914;
+  padding: 0.2em 0.8em;
+  font-weight: 900;
+}
+.overlay .play__icon {
+  font-size: 5rem;
+  color: #ffffff;
+  cursor: pointer;
+  position: absolute;
+}
+.movie__card:hover .overlay {
+  opacity: 1;
+}
+
+.video__player {
+  margin: 0 auto;
+  position: fixed;
+  z-index: 100;
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+}
+
+.video__player button {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  background-color: #e50914;
+  padding: 1em;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  border: none;
+  cursor: pointer;
+}
+footer {
+  background-color: #00081d;
+  color: #ffffffb3;
+  padding: 1em;
+  height: 150px;
+}
+footer a {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+}
