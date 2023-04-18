@@ -4,6 +4,7 @@ import movieTrailer from "movie-trailer";
 import ReactPlayer from "react-player";
 import { GrClose } from "react-icons/gr";
 import { BsPlayCircle } from "react-icons/bs";
+import { motion, AnimatePresence } from "framer-motion";
 const Row = ({ movie, rowTitle }) => {
   const [videoId, setVideo] = useState("");
   const handleClick = (movie) => {
@@ -69,19 +70,26 @@ const Row = ({ movie, rowTitle }) => {
         })}
       </div>
       {videoId && (
-        <div className="video__player position__center">
-          <button className="flex" onClick={() => setVideo("")}>
-            <GrClose />
-          </button>
-          <ReactPlayer
-            className="trailer"
-            url={`https://www.youtube.com/watch?v=${videoId}`}
-            playing={true}
-            controls={true}
-            width={"100%"}
-            height={"100%"}
-          />
-        </div>
+        <AnimatePresence>
+          <motion.div
+            className="video__player position__center"
+            initial={{ opacity: 0, y: "-100vh" }}
+            animate={{ opacity: 1, y: 0, x: 0 }}
+            exit={{ opacity: 0, y: "-100vh" }}
+          >
+            <button className="flex" onClick={() => setVideo("")}>
+              <GrClose />
+            </button>
+            <ReactPlayer
+              className="trailer"
+              url={`https://www.youtube.com/watch?v=${videoId}`}
+              playing={true}
+              controls={true}
+              width={"100%"}
+              height={"100%"}
+            />
+          </motion.div>
+        </AnimatePresence>
       )}
     </div>
   );
